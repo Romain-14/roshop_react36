@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "label": "Product 1",
+        "description": "This is a product description for product 1",
+        "price": 100,
+        "img_name": "ballon",
+        "discountedBy" : 1,
+        "tag": ["new", "multimédia", "coup-de-coeur"]
+    },
+    {
+        "id": 2,
+        "label": "Product 2",
+        "description": "This is a product description for product 2",
+        "price": 200,
+        "img_name": "binouze",
+        "discountedBy" : 2,
+        "tag": ["new", "multimédia"]
+    },
+    {
+        "id": 3,
+        "label": "Product 3",
+        "description": "This is a product description for product 3",
+        "price": 300,
+        "img_name": "canape3p",
+        "discountedBy" : 3,
+        "tag": ["new", "multimédia"]
+    },
+    {
+        "id": 4,
+        "label": "Product 4",
+        "description": "ciseaux",
+        "price": 400,
+        "img_name": "ciseaux",
+        "discountedBy" : 4,
+        "tag": [ "multimédia", "coup-de-coeur"]
+    },
+    {
+        "id": 5,
+        "label": "Product 5",
+        "description": "This is a product description for product 5",
+        "price": 500,
+        "img_name": "cptAmerica",
+        "discountedBy" : 5,
+        "tag": ["new", "sport"]
+    },
+    {
+        "id": 6,
+        "label": "Product 6",
+        "description": "This is a product description for product 6",
+        "price": 600,
+        "img_name": "delorean",
+        "discountedBy" : 6,
+        "tag": [ "multimédia", "coup-de-coeur"]
+    },
+    {
+        "id": 7,
+        "label": "Product 7",
+        "description": "This is a product description for product 7",
+        "price": 700,
+        "img_name": "playstation",
+        "discountedBy" : 7,
+        "tag": [ "library", "coup-de-coeur"]
+    },
+    {
+        "id": 8,
+        "label": "Product 8",
+        "description": "This is a product description for product 8",
+        "price": 800,
+        "img_name": "robe",
+        "discountedBy" : 8,
+        "tag": ["multimédia"]
+    },
+    {
+        "id": 9,
+        "label": "Product 9",
+        "description": "This is a product description for product",
+        "price": 900,
+        "img_name": "smartphone",
+        "discountedBy" : 9,
+        "tag": ["new", "garden"]
+    },
+    {
+        "id": 10,
+        "label": "Product 10",
+        "description": "This is a product description for product 10",
+        "price": 1000,
+        "img_name": "tondeuse",
+        "discountedBy" : 10,
+        "tag": ["new", "multimédia"]
+    }
+]

@@ -1,0 +1,196 @@
+@import "./variables";
+
+/* RESET */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* GLOBAL */
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-color: $primary-color;
+	font-family: "Arial", sans-serif;
+	font-size: 1.6rem;
+	line-height: 1.6;
+	color: $dark-color;
+}
+
+p {
+	margin-bottom: 1rem;
+}
+
+a {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	color: $dark-color;
+}
+
+hr {
+	width: 35%;
+	margin: auto;
+	border-color: $secondary-color;
+}
+
+img {
+	display: block;
+	width: 100%;
+	max-height: auto;
+	object-fit: contain;
+}
+
+.dark,
+.dark a {
+	background-color: $dark-color;
+	color: $light-color;
+}
+
+.toggle-dark-mode {
+	background-color: $light-color;
+	border: 0;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+
+    svg {
+        color: $dark-color;
+        font-size: 1.6rem;
+    }
+}
+
+.dark-theme svg {
+	color: $secondary-color;
+}
+
+/* MAIN */
+
+
+h1 {
+	line-height: normal;
+}
+
+h2,
+h3 {
+	text-align: center;
+}
+
+h1 img {
+	width: 120px;
+	height: 30px;
+}
+
+form, input {width: 100%;}
+
+input:not([type="search"]) {
+	width: 60%;
+}
+
+input { 
+	height: 40px;
+	padding: 0.5rem;
+	border: 1px solid #ccc;
+	font-size: 2rem;
+	text-align: center;
+
+    &::placeholder{
+        color: #8e8e8e;
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+.wrapper {
+	margin: 2rem auto 3rem;
+	padding: 0 1rem;
+
+    div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    h2 {
+        width: 100%;
+    }
+
+    img {
+        width: 150px;
+        height: 150px;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        border-bottom: 1px solid #33333345;
+    }
+}
+
+
+
+.card {
+	background-color: $light-color;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	border-radius: 1rem;
+	width: 150px;
+	margin: 1rem auto;
+
+	h3 {
+		margin: 1rem;
+		color: $dark-color;
+	}
+
+	span {
+		display: inline-block;
+		padding: 0.6rem;
+		margin-right: 0.5rem;
+		width: 50px;
+		background-color: $danger-color;
+		border-radius: 0.5rem;
+		color: $primary-color;
+	}
+
+	p {
+		padding: 0.7rem;
+		text-align: center;
+		font-weight: bold;
+		font-size: 1.4rem;
+		color: $danger-color;
+	}
+}
+
+aside {
+	display: flex;
+	justify-content: center;
+	gap: 3rem;
+	margin-bottom: 2rem;
+
+	svg {
+		color: $secondary-color;
+		font-size: 2.6rem;
+	}
+}
+
+footer {
+	padding: 2rem 0 1rem;
+	background-color: $dark-color;
+	color: $primary-color;
+	text-align: center;
+
+	nav {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		justify-content: center;
+		gap: 1rem;
+		margin: 1rem;
+
+		a {
+			color: $primary-color;
+			margin: 0;
+			font-size: 1.4rem;
+		}
+	}
+}

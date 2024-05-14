@@ -1,0 +1,29 @@
+@import "../../assets/styles/scss/variables";
+@import "../../assets/styles/scss/mixins";
+
+.active::after,
+header a:hover::after:not(h1 a) {
+	content: "";
+	position: absolute;
+	top: 28px;
+	left: 0.5rem;
+	width: calc(100% - 0.5rem * 2);
+	height: 2px;
+	background-color: $secondary-color;
+}
+
+header {
+    @include flex($direction: row, $wrap: wrap, $justify: space-between,  $align: center);
+	background-color: $light-color;
+
+    nav {
+        display: flex;
+        gap: 1.5rem;
+        margin-right: 0.5rem;
+        text-transform: uppercase;
+    }
+    
+    a {
+        padding: 0.5rem;
+    }
+}
