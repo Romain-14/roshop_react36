@@ -1,12 +1,13 @@
 import { useContext } from "react";
 import products from "../../data/products.json";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import DarkModeContext from "../../store/dark-mode/Context";
 const base_url_img = new URL("../../assets/images", import.meta.url).href;
 
 function Shop() {
-    const {theme} = useContext(DarkModeContext);
-    
+   
+	const { theme } = useContext(DarkModeContext);
+
 	return (
 		<main className={theme}>
 			<section className="wrapper list">

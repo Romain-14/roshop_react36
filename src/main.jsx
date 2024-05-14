@@ -4,7 +4,8 @@ import App from "./App.jsx";
 import "./assets/styles/scss/index.scss";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-            <DarkModeProvider>
-                    <App />
-            </DarkModeProvider>
+    // Englober l'application du contexte DarkModeProvider (voir store/dark-mode/Context.jsx)
+	<DarkModeProvider>
+		<App />
+	</DarkModeProvider>
 );

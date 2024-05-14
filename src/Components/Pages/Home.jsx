@@ -5,10 +5,12 @@ import products from "../../data/products.json";
 const base_url_img = new URL("../../assets/images", import.meta.url).href;
 
 function Home() {
-    const {theme} = useContext(DarkModeContext);
+    // on récupère le thème actuel en se branchant sur le contexte en utilisant le hook useContext
+    // qui prend en paramètre le contexte à utiliser, c'est ce qui va déterminer les données qu'on va pouvoir récupérer
+    const { theme } = useContext(DarkModeContext);
 
 	return (
-		<main className={theme}>
+		<main className={theme}> {/* on applique le thème récupéré sur le main (dark ou light*/}
 			<section className="wrapper">
 				<h2>Nos nouveaux produits</h2>
 
