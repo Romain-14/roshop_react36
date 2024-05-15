@@ -1,8 +1,32 @@
-# React + Vite
+# créer un contexte utilisateur
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+*Changer l'input type email en text (username) les tests seront plus rapides*
 
-Currently, two official plugins are available:
+A la soumission du formulaire de connexion :
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- mettre à jour le state user (dispatch un type d'action et le nom d'utilisateur)
+- rediriger vers la page home
+
+Le header aura accès à ce state user, afin de proposer une navigation personnalisé.
+Si l'utilisateur est connecté :
+
+- Le lien "Connexion" n'est plus affiché
+- Le lien "Dashboard" est affiché
+- Le bouton "Déconnexion" est affiché (ici un bouton ) à l'apparence des <a> qui va dispatch l'action de déconnexion
+
+Mettre en place un reducer dans un nouveau "Context".
+
+State initial :
+
+```jsx
+const INITIALE_STATE = {
+    isLogged: false,
+    username: "invité"
+}
+```
+
+Dans le dossier store, il y aura un nouveau dossier User avec 2 fichiers: reducer.js et Context.jsx
+
+Fichier reducer.js, aura la tâche de mettre à jour le state en fonction de l'action dispatché ("LOGIN" ou "LOGOUT")
+
+Fichier Context.jsx, va distribuer le state user et la fonction dispatch du hook reducer via le provider.

@@ -2,8 +2,6 @@ import { useContext } from "react";
 import DarkModeContext from "../../store/dark-mode/Context";
 import products from "../../data/products.json";
 
-const base_url_img = new URL("../../assets/images", import.meta.url).href;
-
 function Home() {
     // on récupère le thème actuel en se branchant sur le contexte en utilisant le hook useContext
     // qui prend en paramètre le contexte à utiliser, c'est ce qui va déterminer les données qu'on va pouvoir récupérer
@@ -20,9 +18,7 @@ function Home() {
 							product.tag.includes("new") && (
 								<div key={product.id} className="card ctn-1">
 									<img
-										src={
-											base_url_img +
-											"/" +
+										src={"/images/" +									
 											product.img_name +
 											".jpg"
 										}
@@ -49,12 +45,10 @@ function Home() {
 							product.tag.includes("coup-de-coeur") && (
 								<div key={product.id} className="card ctn-1">
 									<img
-										src={
-											base_url_img +
-											"/" +
-											product.img_name +
-											".jpg"
-										}
+										src={"/images/" +									
+                                        product.img_name +
+                                        ".jpg"
+                                    }
 										alt="image fictive"
 									/>
 									<p className="promo-alert">

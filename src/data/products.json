@@ -22,7 +22,7 @@
         "label": "Product 3",
         "description": "This is a product description for product 3",
         "price": 300,
-        "img_name": "canape3p",
+        "img_name": "canape3P",
         "discountedBy" : 3,
         "tag": ["new", "multimédia"]
     },

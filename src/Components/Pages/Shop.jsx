@@ -2,7 +2,6 @@ import { useContext } from "react";
 import products from "../../data/products.json";
 import { Link } from "react-router-dom";
 import DarkModeContext from "../../store/dark-mode/Context";
-const base_url_img = new URL("../../assets/images", import.meta.url).href;
 
 function Shop() {
    
@@ -20,12 +19,10 @@ function Shop() {
 						products.map((product) => (
 							<article key={product.id} className="card ctn-1">
 								<img
-									src={
-										base_url_img +
-										"/" +
-										product.img_name +
-										".jpg"
-									}
+									src={"/images/" +									
+                                    product.img_name +
+                                    ".jpg"
+                                }
 									alt={product.label}
 								/>
 								<h3 className="product-title">

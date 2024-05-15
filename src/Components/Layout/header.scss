@@ -2,7 +2,8 @@
 @import "../../assets/styles/scss/mixins";
 
 .active::after,
-header a:hover::after:not(h1 a) {
+header a:hover::after:not(h1 a),
+header nav button:hover::after {
 	content: "";
 	position: absolute;
 	top: 28px;
@@ -21,6 +22,17 @@ header {
         gap: 1.5rem;
         margin-right: 0.5rem;
         text-transform: uppercase;
+        
+        button{
+            position: relative;
+            padding: 0.5rem;
+            border: 0;
+            background-color: initial;
+            text-transform: uppercase;
+            font-size: 1.6rem;
+            color: #333;
+            cursor: pointer;
+        }
     }
     
     a {

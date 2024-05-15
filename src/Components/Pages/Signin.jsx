@@ -1,51 +1,44 @@
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import DarkModeContext from "../../store/dark-mode/Context";
-
+import UserContext from "../../store/user/Context";
 
 // Ce composant a été généré par l'IA par détection de voix, c'est pour quoi le style est en ligne(inline style)
 function Signin() {
-
+	const navigate = useNavigate();
 	const { theme } = useContext(DarkModeContext);
+	// Ici on récupère le dispatch du hook useReducer User pour envoyer définir une action à effectuer dans le reducer les données de l'utilisateur
+	const { dispatch } = useContext(UserContext);
 
+	function submitHandler(e) {
+		e.preventDefault();
+		dispatch({
+			type: "LOGIN",
+			payload: e.target.username.value ,
+		});
+		// redirection vers la page d'accueil
+		navigate("/");
+	}
 	return (
 		<main className={theme}>
-			<form
-				style={{
-					display: "flex",
-					flexDirection: "column",
-					alignItems: "center",
-				}}
-			>
-				<label htmlFor="email">Email:</label>
+			<form onSubmit={submitHandler}>
 				<input
-					type="email"
-					id="email"
-					name="email"
-					aria-label="Email"
-					placeholder="Enter your email"
+					type="text"
+					id="username"
+					name="username"
+					aria-label="username"
+					placeholder="Enter your username"
 				/>
-				<label htmlFor="password">Password:</label>
+
 				<input
-                    className={theme}
-                    type="password"
+					className={theme}
+					type="password"
 					id="password"
 					name="password"
 					aria-label="Password"
 					placeholder="Enter your password"
 				/>
-				<button
-					type="submit"
-					style={{
-						backgroundColor: "steelblue",
-						color: "white",
-						padding: "10px 20px",
-						fontSize: "16px",
-						borderRadius: "5px",
-						marginTop: "10px",
-					}}
-				>
-					Sign In
-				</button>
+				<button type="submit">Sign In</button>
 			</form>
 		</main>
 	);

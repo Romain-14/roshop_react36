@@ -47,7 +47,7 @@ img {
 }
 
 .dark,
-.dark a {
+.dark a, .dark nav button {
 	background-color: $dark-color;
 	color: $light-color;
 }
@@ -71,6 +71,9 @@ img {
 
 /* MAIN */
 
+main {
+    padding: 1rem;
+}
 
 h1 {
 	line-height: normal;
@@ -86,16 +89,39 @@ h1 img {
 	height: 30px;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+
 form, input {width: 100%;}
 
-input:not([type="search"]) {
-	width: 60%;
+input:not([type="search"]), form button {
+    width: 50%;
+    margin-bottom: 1rem;
+    border: 1px solid $secondary-color;
+    border-radius: 1rem;
+}
+
+form button {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    color: $secondary-color;
+    font-weight: bold;
+    font-size: 1.8rem;
+    border: 1px solid $secondary-color;
+    cursor: pointer;
 }
 
 input { 
+    border-left: 0;
+    border-right: 0;
 	height: 40px;
 	padding: 0.5rem;
-	border: 1px solid #ccc;
 	font-size: 2rem;
 	text-align: center;
 
